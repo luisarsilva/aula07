@@ -1,0 +1,36 @@
+import {}
+
+export class Livro extends ItemBiblioteca {
+    private autor: string;
+    private numeroPaginas: number;
+
+    constructor(titulo: string, anoPublicacao: number, autor: string, numeroPaginas: number) {
+        super(titulo, anoPublicacao);
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
+    }
+
+    public get getAutor(): string {
+        return this.autor;
+    }
+
+    public set setAutor(novoAutor: string) {
+        if (novoAutor === "") {
+            console.log("\n ERRO: O autor não pode ser vazio");
+            return;
+        }
+        this.autor = novoAutor;
+    }
+
+    public get getNumeroPaginas(): number {
+        return this.numeroPaginas;
+    }
+
+    public set setNumeroPaginas(novoNumeroPaginas: number) {
+        if (novoNumeroPaginas <= 0) {
+            console.log("\n ERRO: O número de páginas deve ser maior que zero");
+            return;
+        }
+        this.numeroPaginas = novoNumeroPaginas;
+    }
+}
