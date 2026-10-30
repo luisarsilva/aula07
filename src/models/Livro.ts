@@ -1,6 +1,6 @@
-import {}
+import { Biblio } from "./Biblio.js";
 
-export class Livro extends ItemBiblioteca {
+export class Livro extends Biblio {
     private autor: string;
     private numeroPaginas: number;
 
@@ -10,24 +10,20 @@ export class Livro extends ItemBiblioteca {
         this.numeroPaginas = numeroPaginas;
     }
 
-    public get getAutor(): string {
-        return this.autor;
-    }
+    public get getAutor(): string {return this.autor}
 
     public set setAutor(novoAutor: string) {
-        if (novoAutor === "") {
+        if (novoAutor.trim() .length === 0) {
             console.log("\n ERRO: O autor não pode ser vazio");
             return;
         }
         this.autor = novoAutor;
     }
 
-    public get getNumeroPaginas(): number {
-        return this.numeroPaginas;
-    }
+    public get getNumeroPaginas(): number {return this.numeroPaginas}
 
     public set setNumeroPaginas(novoNumeroPaginas: number) {
-        if (novoNumeroPaginas <= 0) {
+        if (novoNumeroPaginas === 0) {
             console.log("\n ERRO: O número de páginas deve ser maior que zero");
             return;
         }

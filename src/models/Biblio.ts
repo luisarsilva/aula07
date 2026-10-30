@@ -12,7 +12,7 @@ export class Biblio {
     }
 
     public set setTitulo(novoTitulo: string) {
-        if (novoTitulo .trim() .length === 0) {
+        if (novoTitulo.trim() .length === 0) {
             console.log("\n ERRO: O título não pode ser vazio");
             return;
         }
