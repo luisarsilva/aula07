@@ -7,9 +7,8 @@ export class Biblio {
         this.anoPublicacao = anoPublicacao;
     }
 
-    public get getTitulo(): string {
-        return this.titulo;
-    }
+    public get getTitulo(): string {return this.titulo}
+    public get getAnoPublicacao(): number {return this.anoPublicacao}
 
     public set setTitulo(novoTitulo: string) {
         if (novoTitulo.trim() .length === 0) {
@@ -19,9 +18,6 @@ export class Biblio {
         this.titulo = novoTitulo;
     }
 
-    public get getAnoPublicacao(): number {
-        return this.anoPublicacao;
-    }
 
     public set setAnoPublicacao(novoAnoPublicacao: number) {
         if (novoAnoPublicacao === 0) {
