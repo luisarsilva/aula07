@@ -2,12 +2,12 @@ import { Biblio } from "./Biblio.js";
 
 export class Livro extends Biblio {
     private autor: string;
-    private npag: number;
+    private nPag: number;
 
-    constructor(titulo: string, anoPublicacao: number, autor: string, npag: number) {
+    constructor(titulo: string, anoPublicacao: number, autor: string, nPag: number) {
         super(titulo, anoPublicacao);
         this.autor = autor;
-        this.npag = npag;
+        this.nPag = nPag;
     }
 
     public get getAutor(): string {return this.autor}
@@ -27,6 +27,6 @@ export class Livro extends Biblio {
             console.log("\n ERRO: O número de páginas deve ser maior que zero");
             return;
         }
-        this.nPag = novonPag;
+        this.nPag = novoNPag;
     }
 }
